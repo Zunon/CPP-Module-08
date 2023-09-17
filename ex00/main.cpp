@@ -6,7 +6,7 @@
 /*   By: kalmheir <kalmheir@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 10:46:36 by kalmheir          #+#    #+#             */
-/*   Updated: 2023/09/17 10:56:51 by kalmheir         ###   ########.fr       */
+/*   Updated: 2023/09/17 10:59:10 by kalmheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,12 @@ int	main(void) {
 	std::cout << std::endl;
 
 	std::cout << "list: ";
-	for (int i = 0; i < 10; i++)
-		std::cout << l.front() << " ";
+	for (int i = 0; i < 10; i++) {
+		int num = l.front();
+		std::cout << num << " ";
+		l.pop_front();
+		l.push_back(num);
+	}
 	std::cout << std::endl;
 
 	std::cout << "deque: ";
